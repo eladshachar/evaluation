@@ -1,5 +1,6 @@
 from urllib import response
 from fastapi import FastAPI, Response
+from fastapi.middleware.cors import CORSMiddleware
 import json
 import requests
 import uvicorn
@@ -7,6 +8,16 @@ import uvicorn
 from db_queries import get_dairy_ingredients, get_gluten_ingredients
 
 app = FastAPI()
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/recipes", status_code=200)
 def get_recipes_by_ingredient(ingredient, no_dairy, no_gluten):

@@ -45,6 +45,20 @@
 
     <script src="data.js"></script>
     <script src="renderer.js"></script>
-    <script src="controller.js"></script> 
+    <script src="controller.js"></script>
+    
+    <script id = "recipes-template" type="text/x-handlebars-template">
+        {{#each recipes}}
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 xl-3" >
+                <div class="recipe">
+                    <img src="{{thumbnail}}">
+                    <h2>{{title}}</h2>
+                    <ul> Ingredients
+                        
+                    </ul>
+                </div>
+            </div>   
+        {{/each}}
+    </script> 
 </body>
 </html>

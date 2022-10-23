@@ -1,4 +1,4 @@
-const get_recipes = async function (ingredient: string, noGluten: boolean, noDairy: boolean) {
+const getRecipes = async function (ingredient: string, noGluten: boolean, noDairy: boolean) {
     
     let glutenFree: string
     let dairyFree: string
