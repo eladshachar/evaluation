@@ -18,10 +18,9 @@ $("#dairy-filter").on("click", function () {
 });
 $("#search-button").on("click", function () {
     return __awaiter(this, void 0, void 0, function* () {
-        let ingredient = "cheese";
-        // ingredient = $("#ingredient").val()
+        let ingredient = $("#ingredient").val();
+        console.log(ingredient);
         let recipes = yield getRecipes(ingredient, glutenFree, dairyFree);
-        console.log(recipes);
         renderRecipes(recipes);
     });
 });
