@@ -9,10 +9,40 @@
             crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href = "style.css">
     <title>Evaluation Project</title>
 </head>
 <body>
+
+    <div class="container">
+        <div class="row" id="selection-container">
+            <div class = "col-xs-2 col-sm-2 col-md-2 col-lg-2" id="gluten-filter">
+                <input type="checkbox" id="gluten" name="vehicle1">
+                <label for="gluten">Gluten Free</label>
+            </div>
+            <div class = "col-xs-2 col-sm-2 col-md-2 col-lg-2" id="dairy-filter">
+                <input type="checkbox" id="dairy" name="vehicle1">
+                <label for="dairy">Dairy Free</label>
+            </div>
+            <div class = "col-xs-6 col-sm-6 col-md-6 col-lg-6" id="ingredient">
+                <input type="text" id="ingredient" placeholder="Ingredient">
+            </div>
+            <div class = "col-xs-2 col-sm-2 col-md-2 col-lg-2" id="search-button">
+                <button id="search">Search</button>
+            </div>
+        </div>
+        <div class="row" id="recipes-container"></div>
+    </div>
+
     <script src="data.js"></script>
     <script src="renderer.js"></script>
     <script src="controller.js"></script> 
