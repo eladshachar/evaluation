@@ -3,19 +3,18 @@ let dairyFree: boolean = false
 
 $("#gluten-filter").on("click", function(){
     
-    glutenFree = $("#gluten-filter").is(":checked") 
+    glutenFree = $("#gluten").is(":checked") 
 
 })
 
 $("#dairy-filter").on("click", function(){
     
-    dairyFree = $("#dairy-filter").is(":checked") 
+    dairyFree = $("#dairy").is(":checked") 
     
 })
 
 $("#search-button").on("click", async function() {
     let ingredient = $("#ingredient").val()
-    console.log(ingredient)
     let recipes = await getRecipes(ingredient, glutenFree, dairyFree)
     renderRecipes(recipes)
 })

@@ -11,15 +11,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 let glutenFree = false;
 let dairyFree = false;
 $("#gluten-filter").on("click", function () {
-    glutenFree = $("#gluten-filter").is(":checked");
+    glutenFree = $("#gluten").is(":checked");
 });
 $("#dairy-filter").on("click", function () {
-    dairyFree = $("#dairy-filter").is(":checked");
+    dairyFree = $("#dairy").is(":checked");
 });
 $("#search-button").on("click", function () {
     return __awaiter(this, void 0, void 0, function* () {
         let ingredient = $("#ingredient").val();
-        console.log(ingredient);
         let recipes = yield getRecipes(ingredient, glutenFree, dairyFree);
         renderRecipes(recipes);
     });
